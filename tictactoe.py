@@ -34,7 +34,7 @@ while True:
 
     # If board is completely filled and no winner was declared, result is a draw
     if len(marked) == 9:
-        print('Draw!')
+        print('\nDRAW! How about another game?')
         break
 
 printBoard(board)
