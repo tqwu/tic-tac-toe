@@ -2,6 +2,7 @@
 def invalidEntry():
     print('Invalid entry, please try again')
 
+
 def checkWin(board):
     winning_combinations = [
         (0, 1, 2), (3, 4, 5), (6, 7, 8),  # Rows
