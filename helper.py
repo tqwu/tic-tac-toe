@@ -1,4 +1,7 @@
 
+def invalidEntry():
+    print('Invalid entry, please try again')
+
 def checkWin(board):
     winning_combinations = [
         (0, 1, 2), (3, 4, 5), (6, 7, 8),  # Rows
@@ -10,11 +13,19 @@ def checkWin(board):
             return True
     return False
 
+
 def printBoard(board):
     print(board[0:3])
     print(board[3:6])
     print(board[6:9])
 
+
 def printHelper():
-    print("\nEnter a number between 1 through 9 to place your tile:")
-    for row in [[1,2,3],[4,5,6],[7,8,9]]: print(row)
+
+    print("\nEnter a number between 1 through 9 to place your tile.")
+
+    print("\nEnter 'B' if you like to play with empty spaces")
+    for row in [['_','X','_'],['O','_','_'],['X','_','_']]: print(row)
+
+    print("\nEnter 'N' if you like to play with number helpers")
+    for row in [['1','X','3'],['O','5','6'],['X','8','9']]: print(row)

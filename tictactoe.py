@@ -1,11 +1,20 @@
 
-from helper import checkWin, printBoard, printHelper
+from helper import checkWin, printBoard, printHelper, invalidEntry
 
 printHelper()
 
 user_X = True
 board = ['_'] * 9
 marked = set()
+
+while True:
+    board_pref = input("\nBoard preference: ").upper()
+    if board_pref == 'N':
+        board = [str(i + 1) for i in range(9)]
+        break
+    elif board_pref == 'B': break
+    else: invalidEntry()
+printBoard(board)
 
 # Continuously read user input until board is filled or winner is declared
 while True:
@@ -15,7 +24,7 @@ while True:
     move = input(f"\nPlayer {player}, enter your selection: ")
 
     if not move.isdigit() or not (1 <= int(move) <= 9):
-        print('Invalid entry, please try again')
+        invalidEntry()
         continue
 
     if move in marked:
