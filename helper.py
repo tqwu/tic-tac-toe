@@ -20,7 +20,7 @@ def printBoard(board):
     print(board[6:9])
 
 
-def printHelper():
+def printTutorial():
 
     print("\nTUTORIAL: Enter a number between 1 through 9 to place your tile.")
 

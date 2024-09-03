@@ -1,7 +1,7 @@
 
-from helper import checkWin, printBoard, printHelper, invalidEntry
+from helper import checkWin, printBoard, printTutorial, invalidEntry
 
-printHelper()
+printTutorial()
 
 user_X = True
 board = ['_'] * 9
