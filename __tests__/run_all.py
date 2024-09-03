@@ -1,5 +1,4 @@
-# run_all_tests.py
-
+import os
 import subprocess
 
 def run_test_script(script_name):
@@ -11,18 +10,19 @@ def run_test_script(script_name):
             capture_output=True
         )
 
-        # Check if the test passed or failed
         if result.returncode == 0:
             print(f"\n---------- {script_name} ----------")
             print("PASSED\n")
+
         else:
             print(f"\n---------- {script_name} ----------")
             print("FAILED\n")
             print(f"Error Output:\n{result.stderr}")
+            
     except Exception as e:
         print(f"Error running {script_name}: {e}")
 
-test_scripts = ['win_player_1.py', 'win_player_2.py', 'draw.py']
+test_scripts = [f for f in os.listdir('.') if f.endswith('.py') and f != 'run_all.py']
 
 for script in test_scripts:
     run_test_script(script)
