@@ -25,8 +25,8 @@ def printTutorial():
 
     print("\nTUTORIAL: Enter a number between 1 through 9 to place your tile.")
 
-    print("\nEnter 'B' if you want to play on a board with empty spaces")
+    print("\nEnter 'B' if you want to play on a board with blank spaces")
     for row in [['_','X','_'],['O','_','_'],['X','_','_']]: print(row)
 
-    print("\nEnter 'N' if you want to play on a board with number placements")
+    print("\nEnter 'D' if you want to play on a board with digit placements")
     for row in [['1','X','3'],['O','5','6'],['X','8','9']]: print(row)

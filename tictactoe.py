@@ -12,7 +12,7 @@ while True:
 
     board_pref = input("\nBoard preference: ").upper()
 
-    if board_pref == 'N':
+    if board_pref == 'D':
         board = [str(i + 1) for i in range(9)]
         break
     elif board_pref == 'B':
