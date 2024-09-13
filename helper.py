@@ -21,7 +21,7 @@ def printBoard(board):
     print(board[6:9])
 
 
-def printTutorial():
+def printBoardHelper():
 
     print("\nTUTORIAL: Enter a number between 1 through 9 to place your tile.")
 
@@ -30,3 +30,9 @@ def printTutorial():
 
     print("\nEnter 'D' if you want to play on a board with digit placements")
     for row in [['1','X','3'],['O','5','6'],['X','8','9']]: print(row)
+
+
+def printModeHelper():
+    print("\nEnter 'R' if you want to play against a robot")
+    print("Enter 'M' if you want to play in multiplayer mode")
+    
